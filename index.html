@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b6e78'/%3E%3Cpath d='M12 20 20 12M14 12h6v6' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>전남온라인학교 바로가기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* 한 줄 머리 + 두 칸 격자 링크 판, 폰에서는 한 칸 */
+:root {
+  --bg: #f3f6f7;
+  --card: #ffffff;
+  --fg: #16252b;
+  --muted: #5b6d74;
+  --line: #d6e0e3;
+  --accent: #0b6e78;
+  --accent-soft: #e2f1f2;
+  --sheet: #1e7d45;
+  --font-display: "Do Hyeon", "IBM Plex Sans KR", "Malgun Gothic", sans-serif;
+  --font-body: "IBM Plex Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1a1d; --card: #16252a; --fg: #e3eef0; --muted: #93a8ae; --line: #26393f;
+    --accent: #5cc4cc; --accent-soft: #1a3438; --sheet: #5fc98a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1a1d; --card: #16252a; --fg: #e3eef0; --muted: #93a8ae; --line: #26393f;
+  --accent: #5cc4cc; --accent-soft: #1a3438; --sheet: #5fc98a; color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 40px 16px 56px; display: flex; flex-direction: column; gap: 28px; }
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-bottom: 2px solid var(--fg); padding-bottom: 12px; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(28px, 5vw, 40px); line-height: 1.1; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+.date { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+a.link {
+  display: flex; flex-direction: column; gap: 6px; min-width: 0;
+  padding: 18px 18px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  color: inherit; text-decoration: none; transition: border-color .15s, transform .15s, background .15s;
+}
+a.link:hover { border-color: var(--accent); background: var(--accent-soft); }
+a.link:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+a.link.wide { grid-column: 1 / -1; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.tag { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--accent); }
+.tag.sheet { color: var(--sheet); }
+.arrow { color: var(--muted); font-size: 18px; line-height: 1; transition: transform .15s, color .15s; }
+a.link:hover .arrow { transform: translate(2px, -2px); color: var(--accent); }
+.name { font-size: 19px; font-weight: 600; line-height: 1.3; }
+.desc { color: var(--muted); font-size: 14px; }
+.host { font-family: var(--font-mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { a.link, .arrow { transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>전남온라인학교 바로가기</h1>
+    <span class="date" id="today"></span>
+  </header>
+
+  <nav class="grid" aria-label="바로가기">
+    <a class="link wide" href="https://docs.google.com/spreadsheets/d/1aME3s4I0z1vn06hvNJ6HbK53NC4wXYI18W2ef_bgplY/edit?gid=863040503#gid=863040503" target="_blank" rel="noopener">
+      <div class="top"><span class="tag sheet">구글 시트</span><span class="arrow" aria-hidden="true">↗</span></div>
+      <span class="name">주간업무 · 시간표 · 학사일정</span>
+      <span class="host">docs.google.com/spreadsheets</span>
+    </a>
+    <a class="link" href="https://jn-online-class-2026.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="tag">수업</span><span class="arrow" aria-hidden="true">↗</span></div>
+      <span class="name">수업 운영 관리</span>
+      <span class="desc">2026학년도 2학기 수업 운영</span>
+      <span class="host">jn-online-class-2026.vercel.app</span>
+    </a>
+    <a class="link" href="https://online-web-wheat.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="tag">교사</span><span class="arrow" aria-hidden="true">↗</span></div>
+      <span class="name">교사 지원</span>
+      <span class="desc">교육과정 · 수강신청 · 세특 · 질문 게시판</span>
+      <span class="host">online-web-wheat.vercel.app</span>
+    </a>
+    <a class="link" href="https://cal-snowy-omega.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="tag">학사</span><span class="arrow" aria-hidden="true">↗</span></div>
+      <span class="name">참여학교 학사력 모아보기</span>
+      <span class="desc">2026학년도 참여학교 학사력</span>
+      <span class="host">cal-snowy-omega.vercel.app</span>
+    </a>
+    <a class="link" href="https://manual-blond.vercel.app/" target="_blank" rel="noopener">
+      <div class="top"><span class="tag">매뉴얼</span><span class="arrow" aria-hidden="true">↗</span></div>
+      <span class="name">스튜디오 매뉴얼</span>
+      <span class="desc">스튜디오 · 강의실 · 콘텐츠 제작실 · 미디어홀</span>
+      <span class="host">manual-blond.vercel.app</span>
+    </a>
+  </nav>
+</div>
+
+<script>
+(function () {
+  var d = new Date(), w = "일월화수목금토"[d.getDay()];
+  document.getElementById("today").textContent =
+    d.getFullYear() + ". " + (d.getMonth() + 1) + ". " + d.getDate() + ". (" + w + ")";
+})();
+</script>
+</body>
+</html>
